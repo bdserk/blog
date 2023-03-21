@@ -1,6 +1,8 @@
 tengine-lua
 <!--more-->
+
 ### shell 脚本安装
+
 ```
 #!/bin/bash
 if [ ! -e /Data/apps ];then
