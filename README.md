@@ -20,3 +20,5 @@ blog 日常总结
 - [filebeat-work](2017/filebeat-work.md)
 - [filebeat-config](2017/filebeat-config.md)
 - [filebeat-output](2017/filebeat-output.md)
+## 数据库
+- [mysql5.6复制读写分裂](2017/MySQL5.6主从复制及读写分离的实现.md)
