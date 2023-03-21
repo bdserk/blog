@@ -1,5 +1,8 @@
 # 生活
 
+## kindile
+- [kindle传统邮箱推送](2016/kindle-mail-push.md)
+- [kindle网易闪电邮推送](2016/ kindle-网易闪电邮.md)
 ## 画画
 [30天绘画](2019/2019-30天学会绘画.md)
 ## 驾校
