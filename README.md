@@ -37,3 +37,5 @@ blog 日常总结
 - [kuadmin安装k8s-1.11.1](2018/kubeadmin安装kubernetes1.11.1.md)
 - [kuadmin-dashboard-1.10.1](2018/kubenetes-dashboard1.10.0.md)
 - [kuadmin-安装k8s-1.16.2](2018/kuadmin-k8s-1.16.2.md)
+## 静态博客
+- [hugo](2020/hugo.md)
