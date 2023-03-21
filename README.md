@@ -30,3 +30,7 @@ blog 日常总结
 - [docker介绍](2018/docker-介绍.md)
 - [dockerfile介绍](2018/dockerfile-介绍.md)
 - [docker-ce安装](2018/docker-ce-install.md)
+- [docker-compose介绍](2018/docker-compose-介绍.md)
+## k8s
+- [kuadmin安装k8s-1.11.1](2018/kubeadmin安装kubernetes1.11.1.md)
+- [kuadmin-dashboard-1.10.1](2018/kubenetes-dashboard1.10.0.md)
