@@ -22,3 +22,8 @@ blog 日常总结
 - [filebeat-output](2017/filebeat-output.md)
 ## 数据库
 - [mysql5.6复制读写分裂](2017/MySQL5.6主从复制及读写分离的实现.md)
+## 存储
+- [glusterfs-安装和使用](2017/glusterfs-安装和使用.md)
+- [glusterfs-优化和命令](2017/glusterfs-优化和命令.md)
+- [glusterfs-卷管理](2017/glusterfs-卷管理.md)
+- 
