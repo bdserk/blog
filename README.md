@@ -13,6 +13,7 @@ blog 日常总结
 - [tengine](2017/centos6.6-install-tengine.md)
 - [php7](2017/centos6.6-php7.md)
 - [ntp](2017/ntp.md)
+- [kong](2017/centos6.6-install-kong.md)
 ## ELK-Filebeat
 - [kafka集群](2017/kafka-cluster.md)
 - [logstash介绍](2017/logstash.md)
