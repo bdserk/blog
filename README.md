@@ -11,3 +11,4 @@ blog 日常总结
 - [npm和nodejs](2017/centos6.6-install-npm-nodejs.md)
 - [cachecloud](2017/cachecloud-install-redis.md)
 - [tengine](2017/centos6.6-install-tengine.md)
+- [php7](2017/centos6.6-php7.md)
