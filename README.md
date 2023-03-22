@@ -35,13 +35,6 @@ blog 日常总结
    
 </table>
 
-- [npm和nodejs](2017/centos6.6-install-npm-nodejs.md)
-- [cachecloud](2017/cachecloud-install-redis.md)
-- [tengine](2017/centos6.6-install-tengine.md)
-- [php7](2017/centos6.6-php7.md)
-- [ntp](2017/ntp.md)
-- [kong](2017/centos6.6-install-kong.md)
-- [http-ssl](2018/http-ssl.md)
 ## ELK-Filebeat
 - [kafka集群](2017/kafka-cluster.md)
 - [logstash介绍](2017/logstash.md)
