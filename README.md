@@ -27,8 +27,10 @@ blog 日常总结
     <tr>
         <td><a href="2020/鲲鹏系统编译安装mysql5.7.md">01-鲲鹏系统编译安装mysql5.7</a></td>
         <td><a href="2020/鲲鹏系统编译安装mongodb-4.0.12.md">02-鲲鹏系统编译安装mongodb-4.0.12</a></td>
-        <td><a href="2020/鲲鹏系统编译安装Greenplum 6.0.0.md">04-鲲鹏系统编译安装Greenplum 6.0.0</a></td>
-        <td><a href="2020/鲲鹏KAE.md">06-鲲鹏KAE.md</a></td>
+    </tr>
+    <tr>
+        <td><a href="2020/鲲鹏系统编译安装Greenplum 6.0.0.md">03-鲲鹏系统编译安装Greenplum 6.0.0</a></td>
+        <td><a href="2020/鲲鹏KAE.md">04-鲲鹏KAE.md</a></td>
     </tr>
    
 </table>
