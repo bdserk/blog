@@ -8,13 +8,21 @@ blog 日常总结
 - [ansible-模块介绍](2016/ansible-module.md)
 - [cobbler-安装系统](2016/cobbler.md)
 ## centos6.6安装系列
+<table border="0">
+    <tr>
+        <td><a href="2017/centos6.6-install-npm-nodejs.md">01-npm和nodejs</a></td>
+        <td><a href="2017/cachecloud-install-redis.md">02-cachecloud</a></td>
+        <td><a href="2017/centos6.6-install-tengine.md">04-tengine</a></td>
+        <td><a href="2017/centos6.6-php7.md">06-php7</a></td>
+    </tr>
+    <tr>
+        <td><a href="2017/centos6.6-php7.md">01-php7</a></td>
+        <td><a href="2017/ntp.md">03-ntp</a></td>
+        <td><a href="2017/centos6.6-install-kong.md">05-kong</a></td>
+        <td><a href="2018/http-ssl.md">07-http-ssl</a></td>
+    </tr>
+</table>
 
-
-
-| ------------- | ------------- |
-| [npm和nodejs](2017/centos6.6-install-npm-nodejs.md)  | [cachecloud](2017/cachecloud-install-redis.md)  |[ntp](2017/ntp.md)|
-| [tengine](2017/centos6.6-install-tengine.md)  | php7](2017/centos6.6-php7.md) |[kong](2017/centos6.6-install-kong.md)|
-|[http-ssl](2018/http-ssl.md)||
 - [npm和nodejs](2017/centos6.6-install-npm-nodejs.md)
 - [cachecloud](2017/cachecloud-install-redis.md)
 - [tengine](2017/centos6.6-install-tengine.md)
