@@ -273,10 +273,14 @@ gpstop -a -M fast
 gpstart -a -R 
 
 ### 开始修复故障节点
+```
 gprecoverseg -a
+```
 
 ### 查看修复状态 
+```
 gpstate -m
+```
 
 ### 重启greenplum集群
 ```shell
