@@ -267,10 +267,12 @@ gprecoverseg -r # 还原所有Segment的角色
 ```
 
 ### 关闭集群
+```
 gpstop -a -M fast
 
 以restricted方式启动数据库
 gpstart -a -R 
+```
 
 ### 开始修复故障节点
 ```
