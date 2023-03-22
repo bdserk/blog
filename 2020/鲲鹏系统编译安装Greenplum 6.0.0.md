@@ -85,6 +85,7 @@ unzip v1.10.1.zip
 cd ninja-1.10.1/      &&  ./configure.py --bootstrap 
 cp  ninja /usr/bin/
 ### gporca
+```
 cd /root
 wget https://github.com/greenplum-db/gporca/archive/refs/tags/v3.65.3.zip 
 unzip v3.65.3.zip
@@ -95,8 +96,10 @@ vi libgpos/src/common/CStackDescriptor.cpp
 ninja install -C build
 echo  /usr/local/lib >> /etc/ld.so.conf
 ldconfig
+```
 
 ## 源码安装 greenplum
+```
 cd /root
 wget https://github.com/greenplum-db/gpdb/archive/refs/tags/6.0.0.zip  
 unzip 6.0.0.zip  
@@ -104,19 +107,24 @@ cd gpdb-6.0.0/
 ./configure --with-perl --with-python --with-libxml --prefix=/usr/local/gpdb  
 如果遇到报错zstd 已经安装 ，请执行 --without-zstd，那么可以按照提示加上--without-zstd再次安装
 make && make install 
+```
 ## 检测调用库文件
 [图片]
 ## 集群安装
+```
 groupadd -g 3030 gpadmin
 useradd -u 3030 gpadmin -g gpadmin -d /home/gpadmin
 passwd gpadmin
 {输入gpadmin用户新密码}.  ##密码自己设置
+```
 ## hosts解析
+```
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 hw-gpdb-cluster
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 175.40.42.83 Malluma
 127.0.0.1    hw-gpdb-cluster  #解析主机名
 175.40.42.83 hw-gpdb-cluster  #解析主机名
+```
 ## ssh 免密钥
 ```
 su - gpadmin    (切换到gpadmin用户)
