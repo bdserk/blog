@@ -1,27 +1,35 @@
 ## 安装yum依赖
+```
 yum install curl-devel bzip2-devel python-devel openssl-devel readline-devel perl-ExtUtils-Embed libxml2-devel openldap-devel pam pam-devel perl-devel apr-devel libevent-devel libyaml libyaml-devel libedit-devel libffi-devel bison flex -y
 
 yum -y install ncurses ncurses-devel libaio-devel gmp gmp-devel mpfr mpfr-devel libmpc libmpc-devel zlib-devel net-tools cmake openssl openssl-devel gcc-c++ 
+```
 
-## 编译cmake                                   
+## 编译cmake  
+```
 cd /root 
 wget https://cmake.org/files/v3.5/cmake-3.5.2.tar.gz --no-check-certificate 
 tar xf cmake-3.5.2.tar.gz 
 cd cmake-3.5.2 
 ./bootstrap 
 make -j 96 && make install && hash -r &&  /usr/local/bin/cmake --version
+```
 ## 编译安装kaezip
 ### 下载kaezip
+```
 cd /root
 wget https://github.com/kunpengcompute/KAEzip/archive/refs/tags/v1.3.11.tar.gz
  tar xf v1.3.11.tar.gz
 cd KAEzip-1.3.11/
+```
 ### 下载zlib
+```
 wget https://nchc.dl.sourceforge.net/project/libpng/zlib/1.2.11/zlib-1.2.11.tar.gz
 #把zlib拷贝到kae zip 相应的目录中
 cp  zlib-1.2.11.tar.gz KAEzip-1.3.11/open_source/        
-
+```
 ### 下载KAEdriver
+```
 cd /opt/
 wget https://github.com/kunpengcompute/KAEdriver/archive/refs/tags/v1.3.11.tar.gz
 tar xf v1.3.11.tar.gz
@@ -30,24 +38,32 @@ sh autogen.sh
 ./configure 
 make clean  && make 
 make install
+```
 ### 安装kaezlib
 上面准备工作做好以后开始安装
+```
 cd /root
 cd KAEzip-1.3.11
 sh setup.sh install
+```
 ### 覆盖系统zlib库
+```
 cd /usr/local/kaezip/lib
 cp  /lib64/libz.so.1.2.11 /opt/        #备份系统zlib库，拷贝到其他地方
 cp libz.so.1.2.11  /lib64/             #用kae的zlib库覆盖系统zlib库
 mv /lib64/libz.so.1  /lib64/libz.so.1-bak    #软连接改名字，同时备份
 ln -s /lib64/libz.so.1.2.11 /lib64/libz.so.1 #覆盖生成新的软连接，这样系统中zlib就被替换成kae zlib库
+```
 ### 升级pip
+```
  usr/bin/python2 -m pip install --upgrade pip
-
+```
 ## 解决python依赖
+```
 #第一种命令行安装
 pip2 install psutil  pbr lockfile pycparser cffi six bcrypt PyNaCL  ipaddress  enum34  cryptography  paramiko   epydoc   -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
-
+```
+```
 #第二种脚本安装
 #!/bin/bash
 
@@ -60,6 +76,7 @@ do
         pip2 install $i -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 
 done
+```
 
 ## 插件包安装
 
