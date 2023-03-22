@@ -118,6 +118,7 @@ passwd gpadmin
 127.0.0.1    hw-gpdb-cluster  #解析主机名
 175.40.42.83 hw-gpdb-cluster  #解析主机名
 ## ssh 免密钥
+```
 su - gpadmin    (切换到gpadmin用户)
 mkdir ~/.ssh    (当前模块的以下步骤均在gpadmin用户下执行)
 cd ~/.ssh
@@ -126,17 +127,23 @@ ssh hw-gpdb-cluster   (本地hosts先做解析，然后输入yes，输入密码)
 cd .ssh && cat /home/gpadmin/.ssh/id_rsa.pub >>authorized_keys (上面命令成功后，拷贝密钥)
 chmod 600 ~/.ssh/authorized_keys 
 ssh hw-gpdb-cluster date (测试免密钥是否成功，输出date命令时间，代表成功)
+```
 ## 建立数据目录
+```
 mkdir -pv /data/greenplum/master
 mkdir -pv /data/greenplum/gp1
 mkdir -pv /data/greenplum/gp2
+```
 ## 修改目录权限
+```
 chown -R gpadmin:gpadmin /usr/local/gpdb/*
 chown -R gpadmin:gpadmin /data/greenplum/master
 chown -R gpadmin:gpadmin /data/greenplum/gp1
 chown -R gpadmin:gpadmin /data/greenplum/gp2
 chown gpadmin:gpadmin /usr/local/gpdb 
+```
 ## 修改环境变量
+```
 su - gpadmin
 vi ~/.bash_profile
 #添加下面俩行
@@ -144,13 +151,19 @@ source /usr/local/gpdb/greenplum_path.sh
 export MASTER_DATA_DIRECTORY=/home/greenplum/master/gpseg-1
 #加载环境变量
 source ~/.bash_profile
+```
 ## 初始化master主机
+```
 在~目录下增加一个all_hosts_file文件，记录greenplum集群的所有主机
 因为搭建的是单台主机，所以集群中只有hw-gpdb-cluster一台主机
 echo "hw-gpdb-cluster" >> ~/all_hosts_file
+```
 ## 验证用户免密钥是否有效
+```
 gpssh-exkeys -f ~/all_hosts_file
+```
 ## 初始化Greenplum数据库系统
+```
 #拷贝master配置文件
 cp /usr/local/gpdb/docs/cli_help/gpconfigs/gpinitsystem_config /home/gpadmin/
 #修改配置文件，添加如下配置
@@ -158,15 +171,20 @@ declare -a DATA_DIRECTORY=(/data/greenplum/gp1  /data/greenplum/gp2 )
 MASTER_HOSTNAME=hw-gpdb-cluster  # MASTER_HOSTNAME主实例的主机名
 MASTER_DIRECTORY=/data/greenplum/master    # 主实例的目录
 DATABASE_NAME=hwgpadmin    # DATABASE_NAME初始数据库的数据库名
+```
 ## 增加Seg节点
+
 因为搭建的是单台主机，所以集群中段实例也只有hw-gpdb-cluster一台主机。
+```
 #添加主机
  echo "hw-gpdb-cluster" >> ~/seg_hosts_file
 #初始化Seg节点
 gpinitsystem -c ~/gpinitsystem_config -h ~/seg_hosts_file
+```
 ## 连接数据库
+```
 psql -d hwgpadmin
-# 登陆成功如下： 
+#登陆成功如下： 
 hwgpadmin=# select * from gp_segment_configuration;
  dbid | content | role | preferred_role | mode | status | port |    hostname     |     address     |            datadir
 ------+---------+------+----------------+------+--------+------+-----------------+-----------------+--------------------------------
@@ -175,7 +193,7 @@ hwgpadmin=# select * from gp_segment_configuration;
     3 |       1 | p    | p              | n    | u      | 6001 | hw-gpdb-cluster | hw-gpdb-cluster | /home/greenplum/gp2/gpseg1
 (3 rows)
 状态查看
-
+```
 
 ## greenplum数据库操作 
 常用命令
@@ -187,6 +205,7 @@ gpstop
 gpstop -M fast
 
 ### 重启
+```
 gpstop -r# 重新加载配置文件
 gpstop -u# 以维护模式启动master
 #只启动Master来执行维护或者管理任务而不影响Segment上的数据。
@@ -197,8 +216,10 @@ gpstop -mr #停止维护模式,以正常模式重启数据库# 查看gp配置参
 psql -c 'show all'
 #或者
 gpconfig -s <参数名>
+```
 
 ### 修改gp参数
+```
 #设置max_connections,在master上设置为10, 在segment上设置为100
 #-v指定所有节点,包括master,standby,segment
 #-m指定master节点
@@ -206,8 +227,10 @@ gpconfig -s <参数名>
 #-r移除参数的配置
 #-l显示所有可配置的参数
 gpconfig -c max_connections -v 100 -m 10
+```
 
 ### 查看gp状态
+```
 gpstate #查看简要信息
 gpstate -s #查看详细信息
 gpstate -m #查看镜像配置
@@ -216,6 +239,7 @@ gpstate -f #查看standby状态# 恢复
 gprecoverseg # 恢复失败的 segment 实例
 gprecoverseg -F -v # 全量恢复
 gprecoverseg -r # 还原所有Segment的角色
+```
 
 ### 关闭集群
 gpstop -a -M fast
@@ -230,6 +254,7 @@ gprecoverseg -a
 gpstate -m
 
 ### 重启greenplum集群
+```
 gpstop -a -r
 sql 语句
 #查看所有segment节点信息
@@ -268,8 +293,10 @@ select * from pg_resqueue_attributes;
 select * from pg_resqueue_status;
 #在psql中使用\h command可以获取具体命令的语法
 \h create view
+```
 ## 目录结构介绍
 [图片]
+```
 base是数据目录，每个数据库在这个目录下，会有一个对应的文件夹。
 global是每一个数据库公用的数据目录。
 gpperfmon监控数据库性能时，存放监控数据的地方。
@@ -279,3 +306,4 @@ pg_log是数据库的日志信息。
 pg_twophase是二阶段提交的事务信息（关于二阶段提交的内容可参阅第7章中的介绍）
 pg_xlog是数据库重写日志保存的地方，其中每个文件固定大小为64MB，并不断重复使用。
 gp_dbid记录这个数据库的dbid以及它对应的mirror节点的dbid。
+```
