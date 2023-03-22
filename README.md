@@ -7,6 +7,7 @@ blog 日常总结
 - [ansible-playbook](2016/ansible.md)
 - [ansible-模块介绍](2016/ansible-module.md)
 - [cobbler-安装系统](2016/cobbler.md)
+
 ## centos6.6安装系列
 <table border="0">
     <tr>
@@ -19,7 +20,7 @@ blog 日常总结
         <td><a href="2017/centos6.6-php7.md">05-php7</a></td>
         <td><a href="2017/ntp.md">06-ntp</a></td>
         <td><a href="2017/centos6.6-install-kong.md">07-kong</a></td>
-        <td><a href="2018/http-ssl.md">08-http-ssl</a></td>
+        <td><a href="2017/http-ssl.md">08-http-ssl</a></td>
     </tr>
 </table>
 
