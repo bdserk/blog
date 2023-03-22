@@ -219,7 +219,7 @@ gpconfig -s <参数名>
 ```
 
 ### 修改gp参数
-```
+```shell
 #设置max_connections,在master上设置为10, 在segment上设置为100
 #-v指定所有节点,包括master,standby,segment
 #-m指定master节点
@@ -230,7 +230,7 @@ gpconfig -c max_connections -v 100 -m 10
 ```
 
 ### 查看gp状态
-```
+```shell
 gpstate #查看简要信息
 gpstate -s #查看详细信息
 gpstate -m #查看镜像配置
@@ -254,7 +254,7 @@ gprecoverseg -a
 gpstate -m
 
 ### 重启greenplum集群
-```
+```shell
 gpstop -a -r
 sql 语句
 #查看所有segment节点信息
