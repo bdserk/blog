@@ -22,6 +22,16 @@ blog 日常总结
         <td><a href="2018/http-ssl.md">07-http-ssl</a></td>
     </tr>
 </table>
+## 鲲鹏系列
+<table border="0">
+    <tr>
+        <td><a href="2020/鲲鹏系统编译安装mysql5.7.md">01-鲲鹏系统编译安装mysql5.7</a></td>
+        <td><a href="2020/鲲鹏系统编译安装mongodb-4.0.12.md">02-鲲鹏系统编译安装mongodb-4.0.12</a></td>
+        <td><a href="2020/鲲鹏系统编译安装Greenplum 6.0.0.md">04-鲲鹏系统编译安装Greenplum 6.0.0</a></td>
+        <td><a href="2020/鲲鹏KAE.md">06-鲲鹏KAE.md</a></td>
+    </tr>
+   
+</table>
 
 - [npm和nodejs](2017/centos6.6-install-npm-nodejs.md)
 - [cachecloud](2017/cachecloud-install-redis.md)
