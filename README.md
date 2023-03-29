@@ -1,3 +1,6 @@
+
+# blog
+blog 日常总结
 * [blog](#blog)
    * [自动化运维](#自动化运维)
    * [centos6.6安装系列](#centos66安装系列)
@@ -10,9 +13,6 @@
    * [静态博客](#静态博客)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-
-# blog
-blog 日常总结
 
 ## 自动化运维
 - [fabric](2016/fabric.md)
