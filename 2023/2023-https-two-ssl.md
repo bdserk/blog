@@ -4,7 +4,7 @@
 - 同时要有CA证书链（通常是包含多个证书的证书集合）
 
 ## nginx双向证书配置
-
+```
 listen 443 ssl;
         server_name www.xxx.com;
         ssl_certificate /data/program/nginx/conf/ecar-ssl/www.xxx.com.pem;
@@ -15,7 +15,12 @@ listen 443 ssl;
         ssl_session_timeout 5m;
         ssl_protocols TLSv1.2 TLSv1.3;
         ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE; 
+```
 ## 客户端认证
-
+```
 openssl s_client -servername www.xxx.com -connect www.xxx.com:443 -state -CAfile CA-Chain.pem  -cert xxx.com.crt -key xxx.com.key
+```
+或者
+```
 openssl s_client -servername www.xxx.com -connect www.xxx.com:443 -state -CAfile CA-Chain.crt  -cert xxx.com.crt -key xxx.com.key
+```
