@@ -1,6 +1,6 @@
 ## yum安装
 ```
-yum -y install ncurses ncurses-devel libaio-devel gmp gmp-devel  mpfr  mpfr-devel  libmpc libmpc-devel zlib-devel net-tools cmake openssl openssl-devel gcc-c++  rpcgen libtirpc libtirpc-devel  libstdc++-static autoconf 
+yum -y install ncurses ncurses-devel libaio-devel gmp gmp-devel  mpfr  mpfr-devel  libmpc libmpc-devel zlib-devel net-tools cmake openssl openssl-devel gcc-c++  rpcgen libtirpc libtirpc-devel  libstdc++-static autoconf automake libtool
 ```
 ## 编译cmake
 ```
