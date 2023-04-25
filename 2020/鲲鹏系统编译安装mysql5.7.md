@@ -58,7 +58,7 @@ sh setup.sh install
 ```
 ### 覆盖系统zlib库
 ```
-cd /usr/local/c/lib
+cd /usr/local/kaezip/lib
 cp  /lib64/libz.so.1.2.11 /opt/        #备份系统zlib库，拷贝到其他地方
 cp libz.so.1.2.11  /lib64/             #用kae的zlib库覆盖系统zlib库
 mv /lib64/libz.so.1  /lib64/libz.so.1-bak    #软连接改名字，同时备份
