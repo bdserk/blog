@@ -88,7 +88,7 @@ make && make install
 cd /root
 cd mysql-5.7.27/
 mkdir build  && cd build 
-cmake .. -DBUILD_CONF\FIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysql/data -DWITH_BOOST=/root/mysql-5.7.27/boost/boost_1_59_0   -DWITH_ZLIB=system       
+cmake .. -DBUILD_CONFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysql/data -DWITH_BOOST=/root/mysql-5.7.27/boost/boost_1_59_0   -DWITH_ZLIB=system       
 make -j 96
 make install  
 /usr/local/mysql/bin/mysql --version
