@@ -31,9 +31,13 @@ wget https://github.com/kunpengcompute/KAEzip/archive/refs/tags/v1.3.11.tar.gz
 cd KAEzip-1.3.11/
 ```
 ### 下载zlib
+```
 wget https://nchc.dl.sourceforge.net/project/libpng/zlib/1.2.11/zlib-1.2.11.tar.gz
+
 #把zlib拷贝到kae zip 相应的目录中
-cp  zlib-1.2.11.tar.gz KAEzip-1.3.11/open_source/       
+
+cp  zlib-1.2.11.tar.gz KAEzip-1.3.11/open_source/     
+```
 ### 下载KAEdriver
 ```
 cd /opt/
