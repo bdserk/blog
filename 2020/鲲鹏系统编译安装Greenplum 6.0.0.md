@@ -56,7 +56,7 @@ ln -s /lib64/libz.so.1.2.11 /lib64/libz.so.1 #覆盖生成新的软连接，这�
 ```
 ### 升级pip
 ```
- usr/bin/python2 -m pip install --upgrade pip
+/usr/bin/python2 -m pip install --upgrade pip
 ```
 ## 解决python依赖
 ```
