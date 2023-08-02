@@ -12,7 +12,8 @@ rpm -qa|grep -E "hisi|uacce|libwd|libkae"
 yum -y install ncurses ncurses-devel libaio-devel gmp gmp-devel mpfr mpfr-devel libmpc libmpc-devel zlib-devel net-tools cmake openssl openssl-devel gcc-c++
 ```
 ### 编译cmake   
-````
+
+```
 cd /root 
 wget https://cmake.org/files/v3.5/cmake-3.5.2.tar.gz --no-check- certificate 
 tar xf cmake-3.5.2.tar.gz &&  cd cmake-3.5.2 
