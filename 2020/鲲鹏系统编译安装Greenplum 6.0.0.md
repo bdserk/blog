@@ -125,8 +125,10 @@ cd gpdb-6.0.0/
 如果遇到报错zstd 已经安装 ，请执行 --without-zstd，那么可以按照提示加上--without-zstd再次安装
 make && make install 
 ```
+
 ## 检测调用库文件
-[图片]
+
+
 ## 集群安装
 ```
 groupadd -g 3030 gpadmin
