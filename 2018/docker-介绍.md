@@ -1,9 +1,4 @@
----
-
-docker 入门简介
-
----
-
+## docker 入门简介
 
 ### 云计算平台
 
@@ -69,7 +64,6 @@ Docker项目是由Solomon Hykes 所带领的团队发起，在Docker公司的前
 
 ### Containers and virtual machines
 ![image](http://upload-images.jianshu.io/upload_images/1542757-4a4d2dfb279f95eb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 ### docker 客户端
 Docker是一个典型的C/S架构的应用程序，但在发布上 Docker将客户端和服务器端统一在同一个
