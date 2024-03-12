@@ -1,12 +1,24 @@
-# 个人导航免费拥有
+![image](https://github.com/budongshu/blog/assets/17020624/81331b0c-a08c-4800-843b-3e96ff4a6f3a)# 个人导航免费拥有
 
 ## nav导航项目
 项目地址： <https://github.com/shenweiyan/WebStack-Hugo>
 
-### 部署
+## 部署准备
 - 首先fork 项目到自己仓库（项目名字不能更改）
 - 按照步骤，申请token，并且按照文档配置，开启action自动部署
 - 更改workflows里面的hugoAction.yml脚本，进行自动发布
+- 开启github pages，绑定域名
+- 域名解析，正常访问
+
+### 1.1 fork 项目
+这里忽略，可以参考项目文档操作
+
+### 1.2 配置token和actions
+这里忽略，可以参考项目文档操作
+
+
+### 1.3 配置huoAction.yml自动发布脚本
+> 这里是重点关注的地方，当初这里卡了好久
 
 ```
 name: Hugo Actions # 名字自取
@@ -64,3 +76,20 @@ jobs:
 
 `重点是脚本配置`
  ![](https://gitee.com/budongshu/blogimg/raw/master/img/企业微信截图_5623598e-5650-4212-96a6-0ec9a4063e9c.png)
+
+### 配置github pages
+> github 可以配置多个pages的，需要一定的配置技巧
+
+首先配置仓库分支，然后在Custom Domain里面配置域名（建议使用域名），直接配置成三级域名，然后开启https，如下图
+然后dns域名解析的时候，配置cname记录，访问的时候，直接访问下三级域名即可
+cname记录: dao.bdaer.cc  CNAME  bdser.github.com
+![](https://gitee.com/budongshu/blogimg/raw/master/img/20240312183856.png)
+
+### 域名访问
+修改配置文件，自动发布更新，访问<https://dao.bdser.cc>
+
+
+
+
+
+
