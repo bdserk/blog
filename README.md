@@ -74,3 +74,4 @@ blog 日常总结
 - [kuadmin-安装k8s-1.16.2](2018/kuadmin-k8s-1.16.2.md)
 ## 静态博客
 - [hugo](2020/hugo.md)
+
