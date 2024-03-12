@@ -22,6 +22,10 @@ blog 日常总结
 - [cobbler-安装系统](2016/cobbler.md)
 
 ## centos6.6安装系列
+| 服务 | 文档地址 |
+| --- | --- |
+| nodejs | 2017/centos6.6-install-npm-nodejs.md |
+| redis  | 2017/cachecloud-install-redis.md |
 <table border="0">
     <tr>
         <td><a href="2017/centos6.6-install-npm-nodejs.md">01-npm和nodejs</a></td>
