@@ -24,7 +24,7 @@ blog 日常总结
 ## centos6.6安装系列
 | 服务 | 文档地址 |
 | --- | --- |
-| nodejs | <2017/centos6.6-install-npm-nodejs.md> |
+| nodejs | [nodejs](2017/centos6.6-install-npm-nodejs.md) |
 | redis  | <2017/cachecloud-install-redis.md>|
 <table border="0">
     <tr>
