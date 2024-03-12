@@ -87,7 +87,7 @@ cname记录: dao.bdaer.cc  CNAME  bdser.github.com
 ![](https://gitee.com/budongshu/blogimg/raw/master/img/20240312183856.png)
 
 ### 域名访问
-修改配置文件，自动发布更新，访问<https://dao.bdser.cc>
+修改配置文件，自动发布更新，可以访问<https://dao.bdser.cc> ，查看效果
 
 
 
