@@ -83,7 +83,7 @@ jobs:
 首先配置仓库分支，然后在Custom Domain里面配置域名（建议使用域名），直接配置成三级域名，然后开启https，如下图
 然后dns域名解析的时候，配置cname记录，访问的时候，直接访问下三级域名即可
 
-cname记录: dao.bdaer.cc  CNAME  bdser.github.com
+cname记录: dao.bdaer.cc  CNAME  bdser.github.io
 ![](https://gitee.com/budongshu/blogimg/raw/master/img/20240312183856.png)
 
 ### 域名访问
