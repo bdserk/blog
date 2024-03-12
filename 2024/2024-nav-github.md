@@ -62,5 +62,5 @@ jobs:
           full_commit_message: ${{ github.event.head_commit.message }}
 ```
 
-*重点是脚本配置*
+`重点是脚本配置`
  ![](https://gitee.com/budongshu/blogimg/raw/master/img/企业微信截图_5623598e-5650-4212-96a6-0ec9a4063e9c.png)
