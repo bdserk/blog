@@ -77,7 +77,7 @@ jobs:
 `重点是脚本配置`
  ![](https://gitee.com/budongshu/blogimg/raw/master/img/企业微信截图_5623598e-5650-4212-96a6-0ec9a4063e9c.png)
 
-### 配置github pages
+### 1.4 配置github pages
 > github 可以配置多个pages的，需要一定的配置技巧
 
 首先配置仓库分支，然后在Custom Domain里面配置域名（建议使用域名），直接配置成三级域名，然后开启https，如下图
@@ -86,7 +86,7 @@ jobs:
 cname记录: dao.bdaer.cc  CNAME  bdser.github.io
 ![](https://gitee.com/budongshu/blogimg/raw/master/img/20240312183856.png)
 
-### 域名访问
+### 1.5 域名访问
 修改配置文件，自动发布更新，可以访问<https://dao.bdser.cc> ，查看效果
 
 
