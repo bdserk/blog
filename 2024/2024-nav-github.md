@@ -1,4 +1,4 @@
-![image](https://github.com/budongshu/blog/assets/17020624/81331b0c-a08c-4800-843b-3e96ff4a6f3a)# 个人导航免费拥有
+# 个人导航免费拥有
 
 ## nav导航项目
 项目地址： <https://github.com/shenweiyan/WebStack-Hugo>
