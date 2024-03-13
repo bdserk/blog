@@ -20,6 +20,8 @@
 ### 1.3 配置huoAction.yml自动发布脚本
 > 这里是重点关注的地方，当初这里卡了好久
 
+`重点是脚本配置`
+
 ```
 name: Hugo Actions # 名字自取
 
@@ -74,9 +76,6 @@ jobs:
           full_commit_message: ${{ github.event.head_commit.message }}
 ```
 
-`重点是脚本配置`
-
-![](https://gitee.com/budongshu/blogimg/raw/master/img/企业微信截图_5623598e-5650-4212-96a6-0ec9a4063e9c.png)
 
 ### 1.4 配置github pages
 > github 可以配置多个pages的，需要一定的配置技巧
