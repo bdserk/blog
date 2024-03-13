@@ -85,7 +85,7 @@ jobs:
 然后dns域名解析的时候，配置cname记录，访问的时候，直接访问下三级域名即可
 
 cname记录: dao.bdaer.cc  CNAME  bdser.github.io
-![](https://gitee.com/budongshu/blogimg/raw/master/img/20240312183856.png)
+![](https://gitee.com/budongshu/blogimg/raw/master/img/202403131806185.png)
 
 ### 1.5 域名访问
 修改配置文件，自动发布更新，可以访问<https://dao.bdser.cc> ，查看效果
