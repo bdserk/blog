@@ -28,6 +28,7 @@ ls -la  #可以看到.env.php
 
 ### 数据库配置
 由于后台站点会共用数据库，所以具体的数据库配置文件在fy-site-base/lib/App/Db目录（分环境、支持分库分表），控制所有后台站点的数据库
+
 注意：`所有配置文件都可以分环境，比如：.env.php里面的ENV是release则系统会采用etc/release下面的配置文件`
 
 ![](https://gitee.com/budongshu/blogimg/raw/master/img/202403222038468.png)
