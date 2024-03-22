@@ -9,10 +9,12 @@
 ## 代码说明
 > 后台使用HushFramework框架开发 , <https://github.com/jameschz/hush> , 更多配置参考以上开源项目
 
-- 代码目录： /data/code
+
 - 公司官网： fy-site-company  -> 对应正式域名： www.suhemaoan.com 
 - 公司后台： fy-site-gmtool   -> 对应正式域名： gmtool.suhemaoan.com
 - 游戏官网： fy-site-official -> 对应正式域名： yyfy.suhemaoan.com
+- 基础代码： fy-site-base
+- 代码目录： /data/code
 
 ## 项目配置
 
