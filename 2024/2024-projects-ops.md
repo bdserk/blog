@@ -7,7 +7,7 @@
 - 系统盘： 建议40G或者50G
 
 ## 代码说明
-> 后台使用HushFramework框架开发， https://github.com/jameschz/hush，更多配置参考以上开源项目
+> 后台使用HushFramework框架开发 , [](https://github.com/jameschz/hush) , 更多配置参考以上开源项目
 
 - 代码目录： /data/code
 - 公司官网： fy-site-company  -> 对应正式域名： www.suhemaoan.com 
