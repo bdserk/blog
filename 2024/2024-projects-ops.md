@@ -15,6 +15,8 @@
 - 游戏官网： fy-site-official -> 对应正式域名： yyfy.suhemaoan.com
 
 ## 项目配置
+
+### 基础环境配置
 我们以fy-site-company为例子
 ```
 cd /data/code/fy-site-company
@@ -23,10 +25,12 @@ ls -la  #可以看到.env.php
 - `.env.php`: 配置服务环境，基础域名地址
 - `global.appcfg.php`: 配置session存储，redis缓存，静态文件服务器，cdn域名地址等
 - `database.mysql.php`: 数据库配置，这里是深度的分库分表策略，一般由程序控制
-  
 
+### 数据库配置
+由于后台站点会共用数据库，所以具体的数据库配置文件在fy-site-base/lib/App/Db目录（分环境、支持分库分表），控制所有后台站点的数据库
+注意：`所有配置文件都可以分环境，比如：.env.php里面的ENV是release则系统会采用etc/release下面的配置文件`
 
-
+![](https://gitee.com/budongshu/blogimg/raw/master/img/202403222038468.png)
 
 
 
