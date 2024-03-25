@@ -133,7 +133,7 @@ source /etc/profile.d/go.sh
 ```
 
 ## 配置目录
-我们以线上稳定环境版本为例子
+我们以线上稳定环境版本为例子，配置fy-server
 - /data/code/fy-server/etc/env.txt: 配置服务环境
 - /data/code/fy-server/etc/release/config.yaml : 服务启动地址和端口
 - /data/code/fy-server/etc/release/database.yaml: 配置数据库等地址，支持分库，分表
@@ -150,4 +150,16 @@ source /etc/profile.d/go.sh
 cd /data/code/fy-server
 ./build.sh
 ./server.sh
+```
+### 启动服务 
+```
+cd /data/code/fy-server
+./server.sh #或者查看脚本里面内容，把nohup这行命令复制出来，单独知行。
+```
+### 验证服务
+```
+#验证端口存在
+ss -tunlp|grep "端口"
+#炎症进程是否存在
+ps aux |grep "服务名字（比如：fy-server）"
 ```
