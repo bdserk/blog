@@ -31,6 +31,48 @@ echo 'extension=redis' > /etc/php.d/50-php_redis.ini
 php -m
 ```
 ### 域名配置文件
+
+nginx配置
+```shell
+[root@yace-prod-10 conf.d]# pwd
+/etc/nginx/conf.d
+
+[root@yace-prod-10 conf.d]# cat fy-gmtool.conf 
+server {
+        listen        80;
+        server_name  fy-gmtool-yace;
+        root   /data/code/fy-site-gmtool/web/default;
+        location / {
+                index  index.html index.htm index.php;
+                if (!-e $request_filename) {
+                        rewrite  ^(.*)$  /index.php?$1  last;
+                        break;
+                }
+        }
+        location ~ \.php(.*)$ {
+            #fastcgi_pass   127.0.0.1:9000;
+            fastcgi_pass   unix:/run/php-fpm/www.sock;
+            fastcgi_index  index.php;
+            fastcgi_split_path_info  ^((?U).+\.php)(/?.+)$;
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            fastcgi_param  PATH_INFO  $fastcgi_path_info;
+            fastcgi_param  PATH_TRANSLATED  $document_root$fastcgi_path_info;
+            include        fastcgi_params;
+        }
+}
+```
+php-fpm配置
+```shell
+[root@yace-prod-10 conf.d]# cat php-fpm.conf 
+# PHP-FPM FastCGI server
+# network or unix domain socket configuration
+
+upstream php-fpm {
+        server unix:/run/php-fpm/www.sock;
+}
+```
+**也可以拷贝，配置文件在/data/install/fy-server-install目录**
+
 ```
 \cp -f ./fy-gmtool.conf /etc/nginx/conf.d/
 ```
