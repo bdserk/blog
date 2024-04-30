@@ -118,6 +118,7 @@ spec:
 
 
 ### cloudreve ingress
+```shell
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -144,7 +145,7 @@ spec:
               number: 5212
         path: /
         pathType: Prefix
-
+```
 
 ### cloudreve nginx配置
 
