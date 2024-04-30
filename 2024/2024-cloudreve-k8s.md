@@ -160,8 +160,8 @@ server {
 
     include                             global.conf;
 
-    include                             ssl_ecarxmap.com.conf;
-    access_log                          /data/logs/pan-openresty.log json;
+    include                             ssl_xxx.com.conf;
+    access_log                          /data/logs/pan.log json;
 
     client_max_body_size                5000M;
     client_body_buffer_size             5000M;
