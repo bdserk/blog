@@ -60,7 +60,7 @@ spec:
               - key: role
                 operator: In
                 values:
-                - ops
+                - pan           #配置亲和性，pod部署在node标签role=pan的节点
 
       containers:
         - name: cloudreve
