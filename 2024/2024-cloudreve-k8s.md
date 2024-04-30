@@ -1,6 +1,14 @@
 ## k8s编写
-
 - 
+- k8s: v1.22.5
+- cloudreve: 3.8.3
+  
+## 安装cloudreve网盘
+
+
+### 安装前规划
+- 腾讯云obs块存储
+- 腾讯云NFS
 
 ### cloudreve deployment
 
