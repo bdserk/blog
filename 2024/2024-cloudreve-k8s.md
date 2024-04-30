@@ -97,7 +97,7 @@ spec:
             claimName: cloudreve-pvc
         - name: nfs-uploads
           persistentVolumeClaim:
-            claimName: hgpan-pvc-cfsclaim
+            claimName: xxx-pvc-cfsclaim
 ---
 apiVersion: v1
 kind: Service
@@ -117,10 +117,73 @@ spec:
 ```
 
 
-### 
+### cloudreve ingress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "1024M"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "1500"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "1500"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "1500"
+  labels:
+    app: pan
+  name: pan
+  namespace: infra
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: pan.aaa.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: cloudreve
+            port:
+              number: 5212
+        path: /
+        pathType: Prefix
+
+
+### cloudreve nginx配置
+
+```shell
+upstream pan {
+	server  x.x.x.x:5212  max_fails=3 fail_timeout=10s weight=100;  
+}
+server {
+    listen                              80;
+    listen                              443 ssl http2;
+    server_name                         pan.aaa.com;  #cloudreve
+
+    include                             global.conf;
+
+    include                             ssl_ecarxmap.com.conf;
+    access_log                          /data/logs/pan-openresty.log json;
+
+    client_max_body_size                5000M;
+    client_body_buffer_size             5000M;
+
+    if ($http_x_forwarded_proto = http ) {
+        return 301 https://$host$request_uri;
+    }
+
+
+    location / {
+
+    if ($request_uri ~* "keywords") {
+            return 301 https://pan.aaa.com/login;
+       }
+        proxy_pass                      http://pan;
+        proxy_connect_timeout           1500s;
+        proxy_read_timeout              1500s;
+        proxy_send_timeout              1500s;
+        proxy_set_header                X-Forwarded-For $front_real_ip;
+        proxy_set_header                X-Request-ID $request_id;
+    }
+}
+```
 
 
 
-
-
-## 
