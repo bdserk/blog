@@ -2,9 +2,9 @@
 近日，被博通收购后的VMware宣布将桌面虚拟化软件免费给个人用户用了，Windows端的Workstation Pro和Mac端的Fusion Pro统统免费！
 ## 个人虚拟化软件选择
 - virtualBox： 免费开源，但是性能和配置友好性差点意思
-- Parallels Desktop: 
-- hyper-v
-- VMware workstation
+- Parallels Desktop: 非常丝滑，但是收费很贵
+- hyper-v：强制绑定微软，需要一定的技术功底，有一些限制
+- VMware workstation pro： 好用，虚拟化性能好，现在免费
 
 ## VMware Workstation pro 免费说明
 VMware的桌面虚拟化软件将有两种许可证模式
