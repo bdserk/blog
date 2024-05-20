@@ -20,7 +20,7 @@ VMware的桌面虚拟化软件将有两种许可证模式
 ### 注册
 首先我们肯定是要进行注册， 不过这也是接下来最麻烦的一步了，后面都很简单的 
 由于博通把VMware 部分已经够买，并且单独独立公司运作，所以我们这次要注册博通网站
-博通网站： [](https://profile.broadcom.com/web/registration)
+博通网站：https://profile.broadcom.com/web/registration
 ### 登录 
 登录网站 https://login.broadcom.com/me
 
