@@ -25,7 +25,7 @@ VMware的桌面虚拟化软件将有两种许可证模式
 登录网站 https://login.broadcom.com/me
 
 ### 搜索
-我们通过网址：https://support.broadcom.com/group/ecx/my-dashboard?  进行搜索 <这里很关键>
+我们通过网址：https://support.broadcom.com/group/ecx/my-dashboard?  进行搜索 `这里很关键`
 
 ![](https://bdsblog.oss-cn-shanghai.aliyuncs.com/blog/202405202258278.png)
 
