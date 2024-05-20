@@ -1,4 +1,3 @@
-![image](https://github.com/budongshu/blog/assets/17020624/e195e084-ab64-4209-a76e-67e4392a1858)![image](https://github.com/budongshu/blog/assets/17020624/c700d170-a8d3-4347-a023-493a09c054a3)
 ## VMware大调整
 近日，被博通收购后的VMware宣布将桌面虚拟化软件免费给个人用户用了，Windows端的Workstation Pro和Mac端的Fusion Pro统统免费！
 ## 个人虚拟化软件选择
